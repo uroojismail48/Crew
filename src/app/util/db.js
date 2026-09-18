@@ -140,9 +140,9 @@ export const users = [
   },
   {
     "id": 10,
-    "name": "Danish Iqbal",
+    "name": "heyy",
     "age": 26,
-    "email": "danish@gmail.com",
+    "email": "HE@gmail.com",
     "city": "Multan",
     "role": "Full Stack Developer",
     "salary": 105000,
@@ -154,14 +154,4 @@ export const users = [
       "PHP"
     ]
   },
-  {
-    "id": "11",
-    "name": "Ahmed ahmed",
-    "email": "asssara2@gmail.com"
-  },
-  {
-    "id": "11",
-    "name": "Ahmed ahmed",
-    "email": "asssara2@gmail.com"
-  }
 ]

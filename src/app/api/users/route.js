@@ -26,3 +26,28 @@ fs.writeFileSync(
 } 
 
 //updating users
+export async function PUT(req){
+ let {id , name,email,} = await req.json()
+ const userindex = users.findIndex((m) => m.id === Number(id))
+
+ if(userindex === -1){
+return NextResponse.json({result : "NOT FOUND"}, {stutus : 404})
+ }   
+
+ if(name){
+    users[userindex].name = name
+ }
+
+ if(email){
+    users[userindex].email = email
+ }
+
+ const UpdatedUserArray = users;
+ const UpdatedData = JSON.stringify(UpdatedUserArray, null , 2)
+ fs.writeFileSync(
+    "./src/app/util/db.js",
+    `export const users = ${UpdatedData}`, "utf-8"
+ 
+)
+   return NextResponse.json({result : "Updated Successfully"})
+}
