@@ -137,21 +137,5 @@ export const users = [
       "CSS",
       "JavaScript"
     ]
-  },
-  {
-    "id": 10,
-    "name": "heyy",
-    "age": 26,
-    "email": "HE@gmail.com",
-    "city": "Multan",
-    "role": "Full Stack Developer",
-    "salary": 105000,
-    "isActive": false,
-    "skills": [
-      "React",
-      "Laravel",
-      "MySQL",
-      "PHP"
-    ]
-  },
-]
+  }
+];
