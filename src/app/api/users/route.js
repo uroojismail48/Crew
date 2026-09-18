@@ -7,20 +7,22 @@ const data = users;
 return NextResponse.json({data}, {status : 200})
 }
 
-//create user function
+//create user function 
 export async function POST(req , res){
-    let {id , name,age ,email,city,role, salary} = await req.json()
-    if(!id || !name || !age || !email || !city || !role || !salary){
-            return NextResponse.json({result : "Required not Fullfilled"})
+    let {id , name,email,} = await req.json()
+    if(!id || !name || !email ){
+            return NextResponse.json({result : "Requirements not Fullfilled"})
         }else {
-            users.push({id , name, age, email, city  , role, salary})
+            users.push({id,name,email})
             const UpdatedUserArray = users;
             const UpdatedData = JSON.stringify(UpdatedUserArray, null , 2)
-fs.WriteFileSync(
-    "./app/util/db.js",
+fs.writeFileSync(
+    "./src/app/util/db.js",
     `export const users = ${UpdatedData}`, "utf-8"
  
 )
    return NextResponse.json({result : "Added Successfully"})
         }
 } 
+
+//updating users
