@@ -8,7 +8,7 @@ return NextResponse.json({data}, {status : 200})
 }
 
 //create user function 
-export async function POST(req , res){
+export async function POST(req){
     let {id , name,email,} = await req.json()
     if(!id || !name || !email ){
             return NextResponse.json({result : "Requirements not Fullfilled"})
