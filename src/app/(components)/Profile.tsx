@@ -4,8 +4,17 @@
 import { useEffect, useState } from "react"
 
 type User = {
-    name: string,
-    id : number
+    id: number
+    name: string
+    age: number
+    email: string
+    city: string
+    role: string
+    salary: number
+    isActive: boolean
+    profilePic: string
+    skills: string[]
+     alt: string
 }
 
 function Profile() {
@@ -34,7 +43,11 @@ useEffect(() => {
             flex justify-center items-center flex-col text-center">
 
             <div className="h-25 w-25 border-5 rounded-full">
-
+                         <img
+    src={user.profilePic}
+    alt={user.name}
+    className="h-full w-full shrink-0 rounded-full object-cover"
+/>
             </div>
            <p>{user.name}</p>
         </div>

@@ -8,13 +8,14 @@ const meaCulpa = Mea_Culpa({
 })
 function Homepage() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white border p-10 flex flex-col gap-3">
+    <div className="min-h-screen bg-black gray-900 text-white border p-10 flex flex-col gap-3">
      <div className="w-full h-10 flex  justify-center items-center font-bold text-5xl ">
        <h1 className={meaCulpa.className}>InstaUsers</h1>
 
      </div>
      <div className="h-1  w-full bg-white "></div>
 <Profile/>
+    <div className="h-0.5  w-full bg-white "></div>
 <AllUsers/>
     </div>
   )

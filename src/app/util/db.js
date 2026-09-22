@@ -8,12 +8,8 @@ export const users = [
     "role": "Frontend Developer",
     "salary": 75000,
     "isActive": true,
-    "skills": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React"
-    ]
+    "profilePic": "https://plus.unsplash.com/premium_photo-1711434824963-ca894373272e?q=80&w=415&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "skills": ["HTML", "CSS", "JavaScript", "React"]
   },
   {
     "id": 2,
@@ -24,11 +20,8 @@ export const users = [
     "role": "Backend Developer",
     "salary": 50000,
     "isActive": true,
-    "skills": [
-      "Node.js",
-      "Express",
-      "MongoDB"
-    ]
+    "profilePic": "https://i.pravatar.cc/150?img=5",
+    "skills": ["Node.js", "Express", "MongoDB"]
   },
   {
     "id": 3,
@@ -39,11 +32,8 @@ export const users = [
     "role": "UI/UX Designer",
     "salary": 65000,
     "isActive": false,
-    "skills": [
-      "Figma",
-      "Adobe XD",
-      "Photoshop"
-    ]
+    "profilePic": "https://i.pravatar.cc/150?img=9",
+    "skills": ["Figma", "Adobe XD", "Photoshop"]
   },
   {
     "id": 4,
@@ -54,12 +44,8 @@ export const users = [
     "role": "Full Stack Developer",
     "salary": 120000,
     "isActive": true,
-    "skills": [
-      "React",
-      "Node.js",
-      "Express",
-      "MongoDB"
-    ]
+    "profilePic": "https://i.pravatar.cc/150?img=12",
+    "skills": ["React", "Node.js", "Express", "MongoDB"]
   },
   {
     "id": 5,
@@ -70,13 +56,8 @@ export const users = [
     "role": "Frontend Developer",
     "salary": 80000,
     "isActive": true,
-    "skills": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React",
-      "Tailwind"
-    ]
+    "profilePic": "https://i.pravatar.cc/150?img=16",
+    "skills": ["HTML", "CSS", "JavaScript", "React", "Tailwind"]
   },
   {
     "id": 6,
@@ -87,11 +68,8 @@ export const users = [
     "role": "Backend Developer",
     "salary": 110000,
     "isActive": false,
-    "skills": [
-      "PHP",
-      "Laravel",
-      "MySQL"
-    ]
+    "profilePic": "https://i.pravatar.cc/150?img=13",
+    "skills": ["PHP", "Laravel", "MySQL"]
   },
   {
     "id": 7,
@@ -102,11 +80,8 @@ export const users = [
     "role": "Frontend Developer",
     "salary": 70000,
     "isActive": true,
-    "skills": [
-      "React",
-      "Redux",
-      "JavaScript"
-    ]
+    "profilePic": "https://i.pravatar.cc/150?img=20",
+    "skills": ["React", "Redux", "JavaScript"]
   },
   {
     "id": 8,
@@ -117,11 +92,8 @@ export const users = [
     "role": "DevOps Engineer",
     "salary": 135000,
     "isActive": true,
-    "skills": [
-      "Docker",
-      "AWS",
-      "Linux"
-    ]
+    "profilePic": "https://i.pravatar.cc/150?img=15",
+    "skills": ["Docker", "AWS", "Linux"]
   },
   {
     "id": 9,
@@ -132,10 +104,7 @@ export const users = [
     "role": "Student",
     "salary": 30000,
     "isActive": true,
-    "skills": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ]
+    "profilePic": "https://i.pravatar.cc/150?img=23",
+    "skills": ["HTML", "CSS", "JavaScript"]
   }
 ];

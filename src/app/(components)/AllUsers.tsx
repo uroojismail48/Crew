@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from "react"
+import { Heart, MessageCircle, Send, Bookmark } from "lucide-react"
 
 type User = {
     id: number
@@ -11,6 +12,7 @@ type User = {
     role: string
     salary: number
     isActive: boolean
+    profilePic: string
     skills: string[]
 }
 
@@ -30,59 +32,64 @@ function AllUsers() {
     return (
         <div className="h-full w-full p-6">
             <div className="w-full h-10 font-bold text-2xl mb-6">
-                <h1>Feed</h1>
+                <h1>All Users</h1>
             </div>
-            <div className="w-full p-2 h-full flex flex-wrap gap-6 justify-center">
+            <div className="w-full flex flex-wrap items-center gap-8 justify-center">
                 {users.map((user) => (
                     <div
                         key={user.id}
-                        className="group relative flex flex-col justify-between w-100 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                        className="w-full max-w-sm rounded-xl border border-gray-200  overflow-hidden shadow-sm"
                     >
-              
-                        <span
-                            className={`absolute top-4 right-4 h-2.5 w-2.5 rounded-full ${
-                                user.isActive ? "bg-green-500" : "bg-gray-300"
-                            }`}
-                            title={user.isActive ? "Active" : "Inactive"}
+                        {/* Header */}
+                        <div className="flex items-center gap-3 p-3">
+                            <img
+                                src={user.profilePic}
+                                alt={user.name}
+                                className="h-9 w-9 rounded-full object-cover ring-2 ring-pink-500 ring-offset-2"
+                            />
+                            <div className="flex-1">
+                                <p className="text-sm font-semibold capitalize text-gray-400 leading-tight">
+                                    {user.name}
+                                </p>
+                                <p className="text-xs text-gray-500">{user.city}</p>
+                            </div>
+                            {user.isActive && (
+                                <span className="text-[10px] font-medium text-green-500">● Active</span>
+                            )}
+                        </div>
+
+                        {/* "Post" image */}
+                        <img
+                            src={user.profilePic.replace("150", "400")}
+                            alt={`${user.name} post`}
+                            className="w-full aspect-square object-cover"
                         />
 
-                     
-                        <div className="flex items-center gap-3">
-                            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gray-900 text-sm font-semibold text-white">
-                                {user.name.charAt(0).toUpperCase()}
+                        {/* Action icons */}
+                        <div className="flex items-center justify-between px-3 pt-3">
+                            <div className="flex items-center gap-4">
+                                <Heart className="h-6 w-6 text-gray-200" />
+                                <MessageCircle className="h-6 w-6 text-gray-200" />
+                                <Send className="h-6 w-6 text-gray-200" />
                             </div>
-                            <div>
-                                <h1 className="text-base font-semibold text-gray-900 capitalize leading-tight">
-                                    {user.name}
-                                </h1>
-                                <p className="text-xs text-gray-500">{user.role}</p>
-                            </div>
+                            <Bookmark className="h-6 w-6 text-gray-200" />
                         </div>
 
-                  
-                        <div className="mt-4 space-y-1 text-xs text-gray-500">
-                            <p className="capitalize">📍 {user.city} · {user.age} yrs</p>
-                            <p className="truncate">✉️ {user.email}</p>
-                            <p className="font-medium text-gray-700">
-                                Rs {user.salary.toLocaleString()}/mo
+                        {/* Likes (dummy, salary-based flex 😄) */}
+                        <p className="px-3 pt-2 text-sm font-semibold text-gray-600">
+                            {Math.floor(user.salary / 100)} likes
+                        </p>
+
+                        {/* Caption */}
+                        <div className="px-3 pt-1 pb-3">
+                            <p className="text-sm text-gray-200">
+                                <span className="font-semibold capitalize">{user.name}</span>{" "}
+                                <span className="text-gray-700">{user.role} | {user.age} yrs</span>
                             </p>
-                        </div>
-
-                
-                        <div className="mt-4 flex flex-wrap gap-1.5">
-                            {user.skills.slice(0, 4).map((skill) => (
-                                <span
-                                    key={skill}
-                                    className="rounded-full bg-gray-100 px-2.5 py-1 text-[10px] font-medium text-gray-600"
-                                >
-                                    {skill}
-                                </span>
-                            ))}
-                            {user.skills.length > 4 && (
-                                <span className="rounded-full bg-gray-100 px-2.5 py-1 text-[10px] font-medium text-gray-400">
-                                    +{user.skills.length - 4}
-                                </span>
-                            )}
+                            <p className="mt-1 text-sm text-blue-600">
+                                {user.skills.map((skill) => `#${skill.replace(/\s+/g, "")}`).join(" ")}
+                            </p>
+                            <p className="mt-1 text-xs text-gray-400">{user.email}</p>
                         </div>
                     </div>
                 ))}
