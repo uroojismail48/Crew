@@ -21,7 +21,7 @@ fs.writeFileSync(
     `export const users = ${UpdatedData}`, "utf-8"
  
 )
-   return NextResponse.json({result : "Added Successfully"})
+   return {NextResponse}.json({result : "Added Successfully"})
         }
 } 
 
