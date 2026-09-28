@@ -18,5 +18,10 @@ export const Notes = [
     "id": "7e0ce8c1-c2a8-4293-8605-87e6170f3459",
     "title": "zaalima",
     "description": "i love you"
+  },
+  {
+    "id": "5458445a-098c-4a14-9eae-77220bc5a4e9",
+    "title": "hello",
+    "description": "new here"
   }
 ]
